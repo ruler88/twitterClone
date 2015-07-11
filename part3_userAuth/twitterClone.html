@@ -1,0 +1,71 @@
+<head>
+  <title>twitterClone</title>
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-4 col-sm-4">{{> userManagement}}</div>
+    <div class="col-md-8 col-sm-8">{{> tweetBox}}</div>
+  </div>
+</body>
+
+<template name="userManagement">
+  <div class="user-container">
+    <div class="panel panel-default userBox">
+      <div class="panel-body">
+        {{# if currentUser}}
+        <!-- Message for logged in user -->
+        <p>Hello <strong>@{{currentUser.username}}</strong>, welcome to twitterClone</p>
+        <button type="button" class="btn btn-info fullbutton" id="logout">Log out</button>
+
+        {{else}}
+        <!-- Log in module -->
+        <h4>Already have an account?</h4>
+        <div class="form-group">
+          <input class="form-control input-sm" id="login-username" placeholder="Username">
+          <input class="form-control input-sm" id="login-password" placeholder="Password" type="password">
+        </div>
+
+        <button type="button" class="btn btn-info fullbutton login" id="login">Log in</button>
+
+
+        <!-- Sign up module -->
+        <h4>New User?</h4>
+        <div class="form-group">
+          <input class="form-control input-sm" id="signup-username" placeholder="Username">
+          <input class="form-control input-sm" id="signup-fullname" placeholder="Full Name (Optional)">
+          <input class="form-control input-sm" id="signup-password" placeholder="Password" type="password">
+        </div>
+
+        <button type="button" class="btn btn-info fullbutton" id="signup">Sign up</button>
+        {{/if}}
+
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+<template name="tweetBox">
+  <div class="tweetbox-container">
+    <div class="panel panel-default tweetbox">
+      <div class="panel-body">
+        <!-- Text box for tweet content -->
+        <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
+
+        <!-- Character count & button -->
+        <div class="pull-right btnGroup">
+          <strong class="{{charClass}}">{{charCount}}</strong>
+
+          {{#if currentUser}}
+          <button class="btn btn-info pull-right" type="button" {{disableButton}}>Tweet</button>
+          {{else}}
+          <button class="btn btn-info pull-right" type="button" disabled>Please Log In</button>
+          {{/if}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>

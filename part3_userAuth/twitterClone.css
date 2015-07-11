@@ -1,0 +1,46 @@
+/* CSS declarations go here */
+.tweetbox-container {
+  margin: 30px;
+  margin-left: 10px;
+}
+
+.tweetbox,.userBox {
+  background-color: rgb(240, 247, 254);
+}
+
+.tweetbox .btnGroup {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tweetbox .charCount {
+  margin-right: 10px;
+  color: gray;
+}
+
+.tweetbox .errCharCount {
+  margin-right: 10px;
+  color: red;
+}
+
+.user-container {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.user-container h4 {
+  color: gray;
+}
+
+.user-container .fullbutton {
+  width: 100%;
+}
+
+.user-container .input-sm {
+  margin-bottom: 5px;
+}
+
+.user-container .login {
+  margin-bottom: 15px;
+}
