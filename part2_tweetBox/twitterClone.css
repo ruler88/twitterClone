@@ -1,0 +1,24 @@
+/* CSS declarations go here */
+.tweetbox-container {
+  margin: 45px;
+}
+
+.tweetbox {
+  background-color: rgb(240, 247, 254);
+}
+
+.btnGroup {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.charCount {
+  margin-right: 10px;
+  color: gray;
+}
+
+.errCharCount {
+  margin-right: 10px;
+  color: red;
+}
