@@ -68,6 +68,7 @@ if (Meteor.isClient) {
     'click button': function() {
       var tweet = $('#tweetText').val();
       $('#tweetText').val("");
+      Session.set('numChars', 0);
       if (Meteor.user()) {
         Tweets.insert({message: tweet, user: Meteor.user().username});
       }

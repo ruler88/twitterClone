@@ -30,6 +30,7 @@ if (Meteor.isClient) {
     'click button': function() {
       var tweet = $('#tweetText').val();
       $('#tweetText').val("");
+      Session.set('numChars', 0);
       Tweets.insert({message: tweet});
     }
   });
