@@ -1,0 +1,22 @@
+<template name="tweetBox">
+  <div class="tweetbox-container">
+    <div class="panel panel-default tweetbox">
+      <div class="panel-body">
+        <!-- Text box for tweet content -->
+        <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
+
+        <!-- Character count & button -->
+        <div class="pull-right btnGroup">
+          <strong class="{{charClass}}">{{charCount}}</strong>
+
+          {{#if currentUser}}
+          <button class="btn btn-info pull-right" type="button" {{disableButton}}>Tweet</button>
+          {{else}}
+          <button class="btn btn-info pull-right" type="button" disabled>Please Log In</button>
+          {{/if}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>
