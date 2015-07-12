@@ -1,0 +1,30 @@
+<template name="followUsers">
+  {{#if currentUser}}
+  <div class="follow-container">
+    <div class="panel panel-default followBox">
+      <div class="panel-body">
+        <!-- Input box for user to follow -->
+        <form class="form-inline">
+          <input type="text" class="form-control" id="searchUser" placeholder="Search for user">
+          <button type="submit" class="btn btn-info">Search</button>
+        </form>
+
+        <!-- Display box found through search-->
+        {{#if foundUser}}
+        <div class="found-user">
+          <button type="button" class="btn btn-default" id="follow">Follow @{{foundUser.username}}</button>
+        </div>
+        {{/if}}
+
+        <!-- List of people to follow -->
+        <div class="recommend-users">
+          <h5>Who to follow:</h5>
+          {{#each recommendedUsers}}
+            <p><button type="button" class="btn btn-default" id="followRec">Follow @{{this.username}}</button></p>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</template>
