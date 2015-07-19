@@ -5,14 +5,12 @@ Template.followUsers.helpers({
 
   'recommendedUsers': function() {
     if (Meteor.user()) {
-      var currentRelationships = Relationships.find({follower: Meteor.user().username}).fetch();
-      var currentFollowings = currentRelationships.map(function(data) {
-        return data.following;
-      });
-      currentFollowings.push(Meteor.user().username);
+      var currentFollowings = UserUtils.findFollowings(Meteor.user().username);
 
       var recUsers = Meteor.users.find({
-        username: { $nin: currentFollowings }
+        username: {
+          $nin: currentFollowings
+        }
       }, {
         fields: { 'username': 1 },
         limit: 5
