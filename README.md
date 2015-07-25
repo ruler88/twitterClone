@@ -1,9 +1,9 @@
-# TwitterClone in Meteor
+# TwitterClone in Meteor - Tutorial
 
 This repo is intended to supplement Meteor tutorial hosted on my blog. The six parts in the root folder represent the six parts of the tutorial posts.
 
 **Tutorial on blog:**
-<table style="width:75%">
+<table style="width:100%">
   <tr>
     <td>Part 1 - Intro to Meteor</td>
     <td><a href="http://randomdotnext.com/meteor-tutorial-p1/">link</a></td>
@@ -30,6 +30,7 @@ This repo is intended to supplement Meteor tutorial hosted on my blog. The six p
     <td><a href="http://randomdotnext.com/meteor-tutorial-p6/">link</a></td>
   </tr>
 </table>
+
 
 **Demo:** http://twitter.randomdotnext.com/
 
